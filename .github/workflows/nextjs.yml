@@ -3,6 +3,7 @@ name: NextJS Docker Image CI
 on:
   push:
     paths:
+      - '.github/workflows/nextjs.yml'
       - 'nextjs/Dockerfile'
     branches: [ "main" ]
   pull_request:
