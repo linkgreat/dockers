@@ -1,4 +1,4 @@
-name: Golang Docker Image CI
+name: NextJS Docker Image CI
 
 on:
   push:
