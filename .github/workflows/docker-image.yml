@@ -1,7 +1,9 @@
-name: Docker Image CI
+name: Golang Docker Image CI
 
 on:
   push:
+    paths:
+      - 'golang/Dockerfile'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
