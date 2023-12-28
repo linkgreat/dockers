@@ -4,4 +4,4 @@ RUN apk update
 RUN apk add --no-cache libc6-compat proxychains-ng
 RUN echo "Asia/Shanghai" > /etc/timezone
 RUN sed -i  '$d;N;$d;N;$d' /etc/proxychains/proxychains.conf  && echo socks5 172.16.1.10 1080 >> /etc/proxychains/proxychains.conf
-RUN proxychains npm i sharp -g
+RUN npm i sharp -g
