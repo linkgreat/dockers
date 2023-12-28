@@ -3,6 +3,7 @@ name: Golang Docker Image CI
 on:
   push:
     paths:
+      - '.github/workflows/golang.yml'
       - 'golang/Dockerfile'
     branches: [ "main" ]
   pull_request:
