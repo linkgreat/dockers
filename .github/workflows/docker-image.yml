@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: f7star/golang:v1.21  # 替换为你的 Docker Hub 用户名和仓库
+        file: ./Dockerfile  # 确保你的项目中有 Dockerfile
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # 设置在你的 GitHub 仓库的 Secrets 中
+        DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}  # 设置在你的 GitHub 仓库的 Secrets 中
