@@ -1,4 +1,4 @@
-name: NextJS Docker Image CI
+name: ISS-UI-BASE Docker Image CI
 
 on:
   push:
