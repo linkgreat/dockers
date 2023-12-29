@@ -36,5 +36,6 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+        context: ./iss-ui-base
         file: ./iss-ui-base/Dockerfile  # 确保你的项目中有 Dockerfile
       
