@@ -35,6 +35,7 @@ jobs:
     - name: Build and Push Golang
       uses: docker/build-push-action@v4
       with:
+        buildkit: true  # Enable Docker BuildKit
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
