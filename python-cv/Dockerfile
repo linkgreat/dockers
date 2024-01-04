@@ -9,7 +9,7 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
 
 RUN pip install numpy pyinstaller objdump
-RUN pip install opencv-python opencv-python-headles
+RUN pip install opencv-python==4.8.1.78 opencv-python-headles==4.8.1.78
 
 
 ENTRYPOINT ["top", "-b"]
