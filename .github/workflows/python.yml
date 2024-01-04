@@ -26,7 +26,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: f7star/python
+        images: f7star/python-cv
         tags: |
           type=raw,value=latest
           type=raw,value=3.18.8-slim

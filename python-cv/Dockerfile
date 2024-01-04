@@ -12,5 +12,3 @@ RUN pip install numpy pyinstaller objdump
 RUN pip install opencv-python opencv-python-headless
 
 COPY requirements.txt ./
-
-ENTRYPOINT ["top", "-b"]
